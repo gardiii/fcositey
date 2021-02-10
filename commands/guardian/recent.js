@@ -2,8 +2,8 @@ const { Command } = require('discord-akairo');
 
 class RecentCommand extends Command {
     constructor() {
-        super('recent', {
-            aliases: ['recent'],
+        super('logs', {
+            aliases: ['logs'],
             args: [
                 {
                     id: 'ID'
