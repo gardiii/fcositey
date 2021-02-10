@@ -27,8 +27,19 @@ module.exports = {
         unbans: {
             per_minute: 2,
             per_hour: 2
+        
+    },
+        emoji_creations: {
+            per_minute: 2,
+            per_hour: 2
+        },
+        emoji_deletions: {
+            per_minute: 2,
+            per_hour: 2
         }
     },
+    
+    
     _config: 'The following are defaults.',
     config: {
         _null: 'No options to configure currently.'
