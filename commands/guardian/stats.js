@@ -16,7 +16,7 @@ class StatsCommand extends Command {
     async exec(message, args) {
         const embed = this.client.util
             .embed()
-            .setColor(#0000)
+            .setColor("#0000")
             .setTitle(
                 `Statistics for ${message.guild.name} ${
                     args.ID
