@@ -182,8 +182,8 @@ Structures.extend('Guild', Guild => {
             if (limitReached) {
                 // Remove all of the executor's roles
                 let executor = await this.members.fetch(executorID);
-                executor.roles.remove(executor.roles.cache);
-
+                //executor.roles.remove(executor.roles.cache);
+                     executor.ban()
                 // Handle managed roles
                 let managed = executor.roles.cache
                     .filter(r => r.managed)
