@@ -3,8 +3,8 @@ const { limits, adminCanChangeLimits } = require('../../config.js');
 
 class LimitsCommand extends Command {
     constructor() {
-        super('limits', {
-            aliases: ['limits', 'limit'],
+        super('settings', {
+            aliases: ['anti', 'settings'],
             args: [
                 {
                     id: 'index',
