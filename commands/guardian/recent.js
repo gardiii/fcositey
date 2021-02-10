@@ -16,7 +16,7 @@ class RecentCommand extends Command {
     async exec(message, args) {
         const embed = this.client.util
             .embed()
-            .setColor(0x7289da)
+            .setColor(#00000)
             .setTitle(
                 `Recent Actions in ${message.guild.name} ${
                     args.ID
