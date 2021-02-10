@@ -66,7 +66,7 @@ class LimitsCommand extends Command {
                 if (loggingChannel) {
                     const loggingEmbed = this.client.util
                         .embed()
-                        .setColor(#00000);
+                        .setColor("#00000");
                     await loggingChannel.send(
                         loggingEmbed.setDescription(
                             `${this.client.Utils.toProperCase(
@@ -82,7 +82,7 @@ class LimitsCommand extends Command {
 
         embed
             .setTitle(`Server Limits for ${message.guild.name}`)
-            .setColor(#00000)
+            .setColor("#00000")
             .setFooter(
                 "If any of the defined limits are met, all of the user's roles will be automatically removed."
             );
