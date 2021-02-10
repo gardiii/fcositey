@@ -14,7 +14,7 @@ class HelpCommand extends Command {
         const embed = this.client.util.embed()
         const prefix = message.guild.prefix;
          
-        embed.setColor("609131")
+        embed.setColor("#00000")
         embed.setThumbnail(message.author.avatarURL({ dynamic: "true" }))
         embed.setFooter(message.author.username,`https://cdn.discordapp.com/emojis/771689685579333673.gif?v=1`)
         embed.setTimestamp()
