@@ -84,7 +84,7 @@ class LimitsCommand extends Command {
             .setTitle(`Server Limits for ${message.guild.name}`)
             .setColor("#00000")
             .setFooter(
-                "If any of the defined limits are met, all of the user's roles will be automatically removed."
+                "If any of the defined limits are met, all of the user's  will be automatically banned."
             );
         if (!embed.description)
             embed.setDescription(
