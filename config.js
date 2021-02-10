@@ -1,32 +1,32 @@
 module.exports = {
-    defaultPrefix: 'g!',
-    ownerID: '144645791145918464',
+    defaultPrefix: 'f/',
+    ownerID: '627168386199191553',
     _limits: 'The following are defaults.',
     adminCanChangeLimits: true,
     limits: {
         user_removals: {
-            per_minute: 8,
-            per_hour: 24
+            per_minute:2 ,
+            per_hour: 2
         },
         role_creations: {
-            per_minute: 4,
-            per_hour: 12
+            per_minute: 2,
+            per_hour: 2
         },
         channel_creations: {
-            per_minute: 4,
-            per_hour: 12
+            per_minute: 2,
+            per_hour: 2
         },
         role_deletions: {
-            per_minute: 4,
-            per_hour: 12
+            per_minute: 2,
+            per_hour: 2
         },
         channel_deletions: {
-            per_minute: 4,
-            per_hour: 12
+            per_minute:2,
+            per_hour: 2
         },
         unbans: {
-            per_minute: 8,
-            per_hour: 24
+            per_minute: 2,
+            per_hour: 2
         }
     },
     _config: 'The following are defaults.',
