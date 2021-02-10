@@ -202,7 +202,7 @@ Structures.extend('Guild', Guild => {
                                 : executorActionsMinute
                         )
                     )
-                    .setColor(0x7289da);
+                    .setColor(#00000);
 
                 await this.owner.send(
                     embed.setFooter(
