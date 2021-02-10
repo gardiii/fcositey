@@ -201,7 +201,7 @@ client.on("message", async message => {
         "**__CLICK HERE TO  SUPPORT SERVER__**"
       )
       .setURL(
-        `https://discord.gg/wHDsJAUDck`)
+        `https://discord.gg/vfSQ4YcBtF`)
    .setTimestamp()
          .setTimestamp()
 
