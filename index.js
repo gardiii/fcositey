@@ -39,7 +39,7 @@ client.on("message", async message => {
       return message.channel.send("** | Sorry This Command Only For Servers .**");
      let embed = new Discord.MessageEmbed()
        .setTitle(":link: Links")
-      .addField(`:homes:`,`[ Support Server](https://discord.gg/vfSQ4YcBtF)` )
+      .addField(`:homes:`,`[ Support Server](https://discord.gg/robot)` )
       
     . addField(`:envelope_with_arrow:`,`[ Invite Me](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot)`)
      .setColor("#00000")
@@ -201,7 +201,7 @@ client.on("message", async message => {
         "**__CLICK HERE TO  SUPPORT SERVER__**"
       )
       .setURL(
-        `https://discord.gg/vfSQ4YcBtF`)
+        `https://discord.gg/robot`)
    .setTimestamp()
          .setTimestamp()
 
@@ -503,7 +503,8 @@ client.on("ready", () => {
      .setThumbnail(`https://cdn.discordapp.com/emojis/771689685579333673.gif?v=1`
 )
   .setTimestamp();
-  BotOnline.send(online);
+  BotOnline.send(online)
+BotOnline.react("❄")
 });
 client.on("guildCreate", guild => {
    let channel = client.channels.cache.get("808742173573906472");
@@ -537,4 +538,4 @@ client.on("guildDelete", guild => {
    ` );
  channel.send(embed);
 });
-client.login("NzQzMDg1MTcyMDg1MzU4Njgz.XzPh_g.yfG7TU_mmLAir5NrkRpotHpj5-U");
+client.login("NzQzMDg1MTcyMDg1MzU4Njgz.XzPh_g.asxPylhu7C7RuxBSqK3snOi7qjY");
