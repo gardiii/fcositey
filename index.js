@@ -504,7 +504,6 @@ client.on("ready", () => {
 )
   .setTimestamp();
   BotOnline.send(online)
-BotOnline.react("❄")
 });
 client.on("guildCreate", guild => {
    let channel = client.channels.cache.get("808742173573906472");
