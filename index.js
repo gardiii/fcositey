@@ -480,13 +480,15 @@ client.on("message", async message => {
       .catch(console.error);
   }
 });
+
 client.on("ready", () => {
   let BotOnline = client.channels.cache.get("808742150467878922");
 
   let online = new Discord.MessageEmbed()
     .setColor("GREEN")
-    .addField("**Online Bot**",
-    `
+    .addField(
+      "**Fsociety Is Online**",
+      `
 •••••
 :green_circle: **Status  : Online**
 •••••
@@ -499,11 +501,17 @@ client.on("ready", () => {
 🚦 **Channels** :  ${client.channels.cache.size}
 •••••
     
-    `)
-     .setThumbnail(`https://cdn.discordapp.com/emojis/771689685579333673.gif?v=1`
-)
-  .setTimestamp();
-  BotOnline.send(online)
+    `
+    )
+    .setThumbnail(
+      `https://cdn.discordapp.com/emojis/771689685579333673.gif?v=1`
+    )
+    .setTimestamp();
+  BotOnline.send(online).then(message => {
+    message.react("⚡");
+    message.react("❤");
+   message.react("❄");
+  });
 });
 client.on("guildCreate", guild => {
    let channel = client.channels.cache.get("808742173573906472");
