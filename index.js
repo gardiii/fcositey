@@ -28,7 +28,7 @@ const Discord = require('discord.js')
  const prefix = "f/";
 
 client.on("message", message => {
-if(message.content.startsWith(prefix + 'fog')) {
+if(message.content.startsWith(prefix + 'servers')) {
 message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
 
 
@@ -544,5 +544,34 @@ client.on("guildDelete", guild => {
 **Verification Level: ${guild.verificationLevel}**
    ` );
  channel.send(embed);
+});
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "fog")) {
+    if (message.author.bot) return;
+    if (message.author.id !== "809546488639389737") {
+      message.channel.send(
+        `**Sorry ${message.author.username} You Can't Use This Command**`
+      );
+    } else {
+      let servers = " ";
+      let num = 0;
+      client.guilds.cache.forEach(server => {
+        num = num + 1;
+        servers += `\`${num} - \`** ${server.name} **\n`;
+      });
+      message.channel.send(servers);
+    }
+  }
+});
+
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "bot list")) {
+    var list_all = [];
+    message.guild.members.cache.forEach(client => {
+      if (!client.user.bot) return;
+      list_all.push(`<@${client.user.id}>`);
+    });
+    message.channel.send(list_all.join(", "));
+  }
 });
 client.login("NzQzMDg1MTcyMDg1MzU4Njgz.XzPh_g.asxPylhu7C7RuxBSqK3snOi7qjY");
