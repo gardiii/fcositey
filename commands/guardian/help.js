@@ -34,7 +34,7 @@ f/user
  f/lock, f/unlock
  f/slowmode, f/nick
  f/mute, f/unmute
- f/ban, f/kick
+ f/ban, f/kick f/bot, list
 __**[Fuck Society](https://discord.gg/NRzJCsXEr5)** __ -  __**[invite](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot)**__ 
 `);
         
