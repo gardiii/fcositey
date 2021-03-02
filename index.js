@@ -508,8 +508,8 @@ client.on("ready", () => {
     )
     .setTimestamp();
   BotOnline.send(online).then(message => {
+    message.react("🟢");
     message.react("⚡");
-    message.react("❤");
    message.react("❄");
   });
 });
