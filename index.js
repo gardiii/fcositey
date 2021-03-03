@@ -574,4 +574,4 @@ client.on("message", message => {
     message.channel.send(list_all.join(", "));
   }
 });
-client.login("NzQzMDg1MTcyMDg1MzU4Njgz.XzPh_g.asxPylhu7C7RuxBSqK3snOi7qjY");
+client.login("NzQzMDg1MTcyMDg1MzU4Njgz.XzPh_g.cmd9JMdy1TeAosGD3c_SyM4vHOk");
