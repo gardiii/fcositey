@@ -4,14 +4,13 @@ require("events").EventEmitter.defaultMaxListeners = 200;
 const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
 client.on("ready", async () => {
-  console.log(`${client.user.username} Ready .`);
-  console.log(`${client.guilds.cache.size} Servers .`);
-  console.log(`${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} Users .`);
- client.user.setStatus("invisible")
-  client.user.setActivity("f/help |Fsociety Is Here", {
-    type: "PLAYING"
-  });
+  client.user.setActivity("protection is active", {
+    type: "COMPETING",
+  })
+  client.user.setStatus("invisible")
+  console.log(`[ ${client.user.username} ] is active boost up!`);
 });
+
 
 
 
