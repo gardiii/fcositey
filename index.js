@@ -23,10 +23,59 @@ const Discord = require('discord.js')
 
 
 
-
+const cooldown = new Set();
+const cdtime = 10;
 
  const prefix = "f/";
+client.on("message", async message => {
+  if (message.content.startsWith(prefix+"help")) {
+    
+    
+    if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    let help = new Discord.MessageEmbed()
+      .setColor("GREEN")
+      .setFooter(message.author.username, message.author.AvatarURL)
+     
+      .setThumbnail(message.author.avatarURL())
+      .setTitle(`The Command List Of Bot`)
+      .setDescription(`
+     ━────╮•╭────━
+**📘┊Info Commands :** 
+\`k/user\`
+\`k/support\`
+\`k/invite\`
+\`k/about\`
+━────╮•╭────━
+**:zap:┊Admin Commands :**
+\`k/lock\` 
+\`k/unlock\` 
+\`k/clear\`
+\`k/ban\` : @User
+\`k/kick\`: @User
+\`k/nick\`: @User
+\`k/mute\`: @User
+\`k/unmute\`: @User 
+\`k/slowmode\`: [Number]
+━────╮•╭────━
+**:shield:┊Security Commands :**
+\`k/settings\` 
+\`k/logs\` 
+[Support](https://discord.gg/robot) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=738175646299193354&permissions=8&scope=bot) 
+`);
 
+    message.channel.send(help);
+  }
+});
 client.on("message", message => {
 if(message.content.startsWith(prefix + 'servers')) {
 message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
@@ -35,6 +84,17 @@ message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache
 }});
 client.on("message", async message => {
   if (message.content.toLowerCase() === prefix + "invite") {
+    if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
     if (!message.channel.guild)
       return message.channel.send("** | Sorry This Command Only For Servers .**");
      let embed = new Discord.MessageEmbed()
@@ -54,6 +114,17 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.content === prefix + "about") {
+     if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
     if (!message.channel.guild)
       return message.channel.send(
        "** | Sorry This Command Only For Servers .**"
@@ -193,6 +264,17 @@ client.on("message", msg => {
  
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "support")) {
+     if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
     let invite = new Discord.MessageEmbed()
       .setColor("#00000")
       .setFooter(client.user.username)
@@ -332,6 +414,7 @@ client.on("message", message => {
 });
 client.on("message", prof => {
   if (prof.content.startsWith(prefix + "user")) {
+   
     var professor = new Discord.MessageEmbed()
       .setAuthor(client.user.username)
       .setThumbnail(client.user.avatarURL())
