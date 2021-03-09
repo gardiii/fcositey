@@ -51,26 +51,26 @@ client.on("message", async message => {
       .setDescription(`
      ━────╮•╭────━
 **📘┊Info Commands :** 
-\`k/user\`
-\`k/support\`
-\`k/invite\`
-\`k/about\`
+\`f/user\`
+\`f/support\`
+\`f/invite\`
+\`f/about\`
 ━────╮•╭────━
 **:zap:┊Admin Commands :**
-\`k/lock\` 
-\`k/unlock\` 
-\`k/clear\`
-\`k/ban\` : @User
-\`k/kick\`: @User
-\`k/nick\`: @User
-\`k/mute\`: @User
-\`k/unmute\`: @User 
-\`k/slowmode\`: [Number]
+\`f/lock\` 
+\`f/unlock\` 
+\`f/clear\`
+\`f/ban\` : @User
+\`f/kick\`: @User
+\`f/nick\`: @User
+\`f/mute\`: @User
+\`f/unmute\`: @User 
+\`f/slowmode\`: [Number]
 ━────╮•╭────━
 **:shield:┊Security Commands :**
-\`k/settings\` 
-\`k/logs\` 
-[Support](https://discord.gg/robot) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot) 
+\`f/settings\` 
+\`f/logs\` 
+[Support](https://discord.gg/robot) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
 `);
 
     message.channel.send(help);
