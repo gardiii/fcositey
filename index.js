@@ -43,7 +43,7 @@ client.on("message", async message => {
       cooldown.delete(message.author.id);
     }, cdtime * 1000);
     let help = new Discord.MessageEmbed()
-      .setColor("GREEN")
+      .setColor("BLACK")
       .setFooter(message.author.username, message.author.AvatarURL)
      
       .setThumbnail(message.author.avatarURL())
@@ -70,7 +70,7 @@ client.on("message", async message => {
 **:shield:┊Security Commands :**
 \`k/settings\` 
 \`k/logs\` 
-[Support](https://discord.gg/robot) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=738175646299193354&permissions=8&scope=bot) 
+[Support](https://discord.gg/robot) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot) 
 `);
 
     message.channel.send(help);
