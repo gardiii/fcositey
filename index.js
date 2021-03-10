@@ -29,7 +29,10 @@ const cdtime = 10;
  const prefix = "f/";
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
-    
+   if (!message.channel.guild)
+      return message.channel.send(
+         "**❌ | Sorry This Command Only For Servers .**")
+
     
     if (cooldown.has(message.author.id)) {
       return message.channel
@@ -84,6 +87,10 @@ message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache
 }});
 client.on("message", async message => {
   if (message.content.toLowerCase() === prefix + "invite") {
+     if (!message.channel.guild)
+      return message.channel.send(
+         "**❌ | Sorry This Command Only For Servers .**")
+
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(`⏳ | Please wait for 10 second`)
@@ -114,7 +121,8 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.content === prefix + "about") {
-     if (cooldown.has(message.author.id)) {
+    
+    if (cooldown.has(message.author.id)) {
       return message.channel
         .send(`⏳ | Please wait for 10 second`)
         .then(m => {
