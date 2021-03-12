@@ -62,6 +62,8 @@ client.on("message", async message => {
 **:zap:┊Admin Commands :**
 \`f/lock\` 
 \`f/unlock\` 
+\`f/lock all\` 
+\`f/unlock all\`
 \`f/clear\`
 \`f/ban\` : @User
 \`f/kick\`: @User
@@ -640,24 +642,7 @@ client.on("guildDelete", guild => {
    ` );
  channel.send(embed);
 });
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "fog")) {
-    if (message.author.bot) return;
-    if (message.author.id !== "809546488639389737") {
-      message.channel.send(
-        `**Sorry ${message.author.username} You Can't Use This Command**`
-      );
-    } else {
-      let servers = " ";
-      let num = 0;
-      client.guilds.cache.forEach(server => {
-        num = num + 1;
-        servers += `\`${num} - \`** ${server.name} **\n`;
-      });
-      message.channel.send(servers);
-    }
-  }
-});
+
 
 client.on("message", message => {
   if (message.content.startsWith(prefix + "bot list")) {
@@ -667,6 +652,31 @@ client.on("message", message => {
       list_all.push(`<@${client.user.id}>`);
     });
     message.channel.send(list_all.join(", "));
+  }
+});
+client.on("message", msg => {
+  if (msg.content === prefix + "lock all") {
+    if (!msg.member.hasPermission("ADMINISTRATOR"))  return;
+    msg.guild.channels.cache.forEach(c => {
+      c.updateOverwrite(msg.guild.id, {
+        SEND_MESSAGES: false,
+      
+      });
+    });
+    msg.channel.send("🔒 | All Channels Locked");
+  }
+});
+ 
+client.on("message", msg => {
+  if (msg.content === prefix + "unlock all") {
+    if (!msg.member.hasPermission("ADMINISTRATOR"))  return;
+    msg.guild.channels.cache.forEach(c => {
+      c.updateOverwrite(msg.guild.id, {
+        SEND_MESSAGES: true,
+      
+      });
+    });
+    msg.channel.send("🔓 | All Channels Unlocked");
   }
 });
 client.login("NzQzMDg1MTcyMDg1MzU4Njgz.XzPh_g.cmd9JMdy1TeAosGD3c_SyM4vHOk");
