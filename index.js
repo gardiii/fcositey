@@ -75,7 +75,7 @@ client.on("message", async message => {
 **:shield:┊Security Commands :**
 \`f/settings\` 
 \`f/logs\` 
-[Support](https://discord.gg/robot) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
+[Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
 `);
 
     message.channel.send(help);
@@ -297,7 +297,7 @@ client.on("message", async message => {
         "**__CLICK HERE TO  SUPPORT SERVER__**"
       )
       .setURL(
-        `https://discord.gg/robot`)
+        `https://discord.gg/SEdp93xACp`)
    .setTimestamp()
          .setTimestamp()
 
